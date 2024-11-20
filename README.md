@@ -28,12 +28,12 @@ How it works:
 - The final output for each row can then be collected sequentially from the leftmost column of the MAC units.
 
 Key Challenges:
-Because psum need C cycles to be popped out, while calculation need K cycles to be completed. This asynchrony will cause problem:
-When K > C, there will be “0” bubbles in the output, as there will be time when no psum can be popped out.
-When K < C, some psum results are ready but cannot be popped out. It will stuck in FIFO and finally cause overflow.
+- Because psum need C cycles to be popped out, while calculation need K cycles to be completed. This asynchrony will cause problem:
+- When K > C, there will be “0” bubbles in the output, as there will be time when no psum can be popped out.
+- When K < C, some psum results are ready but cannot be popped out. It will stuck in FIFO and finally cause overflow.
 
 Solutions:
-Use AXI stream to control dataflow.
-psum_out_valid control to eliminate zero bubbles in between input datasets
-Stall control of input and intermediate states when output fifo is approaching half-full.
+- Use AXI stream to control dataflow.
+- psum_out_valid control to eliminate zero bubbles in between input datasets
+- Stall control of input and intermediate states when output fifo is approaching half-full.
 
