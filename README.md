@@ -14,7 +14,7 @@ The above command generates an array to process a $3\times4$ matrix multiplied b
 
 The code has been tested out working for the below test cases to cover full range of ROWS, K, and COLS combinations:
 ```bash
-    make systolic_array ROWS=128 COLS=2 K=8 NUM_TESTS=100
+        make systolic_array ROWS=128 COLS=2 K=8 NUM_TESTS=100
 	make systolic_array ROWS=128 COLS=8 K=2 NUM_TESTS=100
 	make systolic_array ROWS=128 COLS=20 K=20 NUM_TESTS=100
 	make systolic_array ROWS=10 COLS=128 K=2 NUM_TESTS=100
