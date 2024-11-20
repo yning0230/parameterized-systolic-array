@@ -1,5 +1,5 @@
 # parameterized-systolic-array
-Initial setup:
+Initial setup for Verilator:
 
 ```bash
     source init.sh
