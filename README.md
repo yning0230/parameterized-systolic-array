@@ -22,10 +22,10 @@ The code has been tested out working for the below test cases to cover full rang
 ```
 
 How it works:
-	each row of one input propagates from the left of the array to the right.
-	each column of the other input propagates from the top of the array to the bottom.
-	The output of each MAC unit is passed to the left MAC unit whenever it becomes a completely ready element for the output. 
-	The final output for each row can then be collected sequentially from the leftmost column of the MAC units.
+- each row of one input propagates from the left of the array to the right. 
+- each column of the other input propagates from the top of the array to the bottom.
+- The output of each MAC unit is passed to the left MAC unit whenever it becomes a completely ready element for the output. 
+- The final output for each row can then be collected sequentially from the leftmost column of the MAC units.
 
 Key Challenges:
 Because psum need C cycles to be popped out, while calculation need K cycles to be completed. This asynchrony will cause problem:
